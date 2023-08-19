@@ -27,8 +27,10 @@ config = get_configurable_parameters(config_path = CONFIG_PATH)
 inferencer = TorchInferencer(path = "./results/padim/mvtec_test/transistor/run/weights/torch/model.pt", device = "auto")
 
 # Test image
-image_path = "./datasets/MVTec/transistor/test/damaged_case/002.png"
+#image_path = "./datasets/MVTec/transistor/test/damaged_case/002.png"
+image_path = "./datasets/MVTec/transistor/test/good/001.png"
 image = read_image(path = image_path)
 prediction = inferencer.predict(image = image)
+print("Score:", prediction.pred_score)
 pyplot.imshow(prediction.segmentations)
 pyplot.show()
