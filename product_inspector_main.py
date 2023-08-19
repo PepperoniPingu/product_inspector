@@ -23,12 +23,12 @@ from PIL import Image
 CONFIG_PATH = "config_padim.yaml"
 config = get_configurable_parameters(config_path = CONFIG_PATH)
 
-# Lad weights in to inferencer
+# Load weights in to inferencer
 inferencer = TorchInferencer(path = "./results/padim/mvtec_test/transistor/run/weights/torch/model.pt", device = "auto")
 
 # Test image
-image_path = "./datasets/MVTec/bottle/test/broken_large/000.png"
-image = read_image(path = "./datasets/MVTec/bottle/test/broken_large/000.png")
+image_path = "./datasets/MVTec/transistor/test/damaged_case/002.png"
+image = read_image(path = image_path)
 prediction = inferencer.predict(image = image)
-pyplot.imshow(prediction.anomaly_map)
+pyplot.imshow(prediction.segmentations)
 pyplot.show()
