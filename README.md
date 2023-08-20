@@ -1,6 +1,6 @@
 # Product Inspector
 
-An implementation of anomalib. 
+An implementation of anomalib for detecting visual faults in products. 
 
 ## Install
 
@@ -14,7 +14,7 @@ Make sure you are in the conda environment:
 
 Run the program:
 
-    python prod
+    python product_inspector_main.py
 
 ## Train
 
@@ -24,9 +24,9 @@ Make sure you are in the conda environment:
 
 Run the program:
 
-    python product_inspector_train.py
+    python product_inspector_training.py
 
-## Adding a new dataset
+## Adding new dataset
 
 Make a new folder in the datasets directory. In that folder make two folders, one called "good" where all the good images go, and, one called bad "bad" where all abnormal/bad images go. It should look something like this:
 
