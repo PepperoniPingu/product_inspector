@@ -1,9 +1,21 @@
 dataset:
+
+  # For new dataset comment out this:
   name: mvtec_test
   format: mvtec
   path: ./datasets/MVTec
   category: transistor
-  task: segmentation
+  # And uncomment this:
+  #name: new_model # Change this to fitting name of new model
+  #format: folder
+  #root: ./datasets/new_dataset # Change this to where new dataset is located
+  #normal_dir: good # Name of subfolder for good images
+  #abnormal_dir: bad # Name of subfolder for bad/abnormal images
+  #mask_dir: null # Optional
+  #normal_test_dir: null # Optional
+
+
+  task: segmentation # options: [segmentation, classification]
   train_batch_size: 32
   eval_batch_size: 32
   num_workers: 4

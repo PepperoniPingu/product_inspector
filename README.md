@@ -4,7 +4,17 @@ An implementation of anomalib.
 
 ## Install
 
-    sudo bash ./product_inspector_setup.py
+    bash ./product_inspector_setup.py
+
+## Run
+
+Make sure you are in the conda environment:
+
+    conda activate anomalib_env
+
+Run the program:
+
+    python prod
 
 ## Train
 
@@ -16,12 +26,18 @@ Run the program:
 
     python product_inspector_train.py
 
-## Run
+## Adding a new dataset
 
-Make sure you are in the conda environment:
+Make a new folder in the datasets directory. In that folder make two folders, one called "good" where all the good images go, and, one called bad "bad" where all abnormal/bad images go. It should look something like this:
 
-    conda activate anomalib_env
+    new_dataset
+    ├── bad
+    │  ├── 00.jpg
+    │  ├── 01.jpg
+    │  ...
+    ├── good
+    │  ├── 00.jpg
+    │  ├── 01.jpg
+    │  ...
 
-Run the program:
-
-    python prod
+Then, see config_padim.yaml and modify according to instructions in the file. 
